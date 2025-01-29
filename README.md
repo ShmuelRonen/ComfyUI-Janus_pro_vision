@@ -1,6 +1,6 @@
 # ComfyUI Janus Pro Vision
 
-A ComfyUI custom node extension that integrates the Janus-Pro-7B vision-language model from DeepSeek AI, enabling powerful image understanding and multi-turn conversation capabilities.
+A ComfyUI custom node extension that integrates the Janus-Pro-7B vision-language model from DeepSeek AI on your's local computer, enabling powerful image understanding and multi-turn conversation capabilities.
 
 #### Vision Mode (One or two images)
 ![image](https://github.com/user-attachments/assets/9f4b0575-2c6d-4c99-beca-2beaa41ef119)
