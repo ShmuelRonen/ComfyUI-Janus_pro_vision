@@ -6,7 +6,8 @@ A ComfyUI custom node extension that integrates the Janus-Pro-7B vision-language
 ![image](https://github.com/user-attachments/assets/9f4b0575-2c6d-4c99-beca-2beaa41ef119)
 
 #### Chat Mode (One or two images)
-![image](https://github.com/user-attachments/assets/81c84c8b-57fa-4880-ba71-5af8fac1bf22)
+![Screenshot 2025-01-29 213437](https://github.com/user-attachments/assets/0fbe7876-b7d8-4124-966a-dbad249e0420)
+
 
 ## Features
 
