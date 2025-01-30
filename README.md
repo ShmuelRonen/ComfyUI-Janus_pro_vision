@@ -36,7 +36,7 @@ The model files will be automatically downloaded on first use from DeepSeek's Hu
 
 If automatic model download failes you can download them manualy to `models\Janus-Pro` folder:
 ```bash
-git clone https://huggingface.co/deepseek-ai/Janus-Pro-7B/ 
+git clone https://huggingface.co/deepseek-ai/Janus-Pro-7B
 ```
 
 
