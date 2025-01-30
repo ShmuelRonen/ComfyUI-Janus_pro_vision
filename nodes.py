@@ -1,15 +1,29 @@
 from typing import List, Optional, Dict, Any, Union, Tuple
 import os
+import sys
 import torch
 import time
 import folder_paths
 import comfy.model_management
 from transformers import AutoModelForCausalLM
-from .janus.models import VLChatProcessor
-from .utils import ImageProcessor, ModelManager, ChatManager, ModelDownloader  # Add ModelDownloader here
 
-# Get device
+# Add current directory to path for local janus module
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
+# Import local modules
+from .janus.models import VLChatProcessor
+from .utils import ImageProcessor, ModelManager, ChatManager, ModelDownloader
+
+# Get device (only once)
 device = comfy.model_management.get_torch_device()
+
+# Set up model paths
+models_path = folder_paths.models_dir
+janus_model_path = os.path.join(models_path, "Janus-Pro")
+os.makedirs(janus_model_path, exist_ok=True)
+folder_paths.add_model_folder_path("janus_model", janus_model_path)
 
 def load_model(self, model_path="base"):
     """Load the model"""
@@ -58,9 +72,6 @@ def load_model(self, model_path="base"):
         error_msg = f"Model loading failed: {str(e)}"
         print(error_msg)
         return ({"error": error_msg, "model": None, "processor": None},)
-
-# Get device
-device = comfy.model_management.get_torch_device()
 
 # Set up model paths
 models_path = folder_paths.models_dir
