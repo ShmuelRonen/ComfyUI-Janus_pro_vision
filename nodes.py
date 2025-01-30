@@ -5,7 +5,7 @@ import time
 import folder_paths
 import comfy.model_management
 from transformers import AutoModelForCausalLM
-from janus.models import VLChatProcessor
+from .janus.models import VLChatProcessor
 from .utils import ImageProcessor, ModelManager, ChatManager, ModelDownloader  # Add ModelDownloader here
 
 # Get device
