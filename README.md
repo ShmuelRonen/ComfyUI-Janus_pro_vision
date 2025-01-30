@@ -32,9 +32,9 @@ pip install requests
 pip install tqdm
 ```
 
-The model files will be automatically downloaded on first use from DeepSeek's HuggingFace repository.
+3. The model files will be automatically downloaded on first use from DeepSeek's HuggingFace repository.
 
-If automatic model download failes you can download them manualy to `models\Janus-Pro` folder:
+4. If automatic model download failes you can download them manualy to `models\Janus-Pro` folder:
 ```bash
 git clone https://huggingface.co/deepseek-ai/Janus-Pro-7B
 ```
