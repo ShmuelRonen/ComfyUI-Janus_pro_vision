@@ -200,7 +200,7 @@ class ImageProcessor:
                 new_width = int(target_size * ratio)
                 
             first_image = cv2.resize(first_image, (new_width, new_height), interpolation=cv2.INTER_LANCZOS4)
-            first_image = cv2.cvtColor(first_image, cv2.COLOR_BGR2RGB)
+        #   first_image = cv2.cvtColor(first_image, cv2.COLOR_BGR2RGB)
             return [Image.fromarray(first_image)], "single"
 
         # Handle two images
