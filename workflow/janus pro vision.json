@@ -1,0 +1,281 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 19,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "VisionModelLoader",
+      "pos": [
+        -15.2066068649292,
+        138.9555206298828
+      ],
+      "size": [
+        285.6000061035156,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "janus_model",
+          "type": "JANUS_MODEL",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VisionModelLoader"
+      },
+      "widgets_values": [
+        "base"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "UnifiedVisionAnalyzer",
+      "pos": [
+        348.8306579589844,
+        138.95486450195312
+      ],
+      "size": [
+        400,
+        344
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "janus_model",
+          "type": "JANUS_MODEL",
+          "link": 15
+        },
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "pos": [
+            10,
+            76
+          ],
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "chat_history",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnifiedVisionAnalyzer"
+      },
+      "widgets_values": [
+        "Please describe this image.",
+        false,
+        753907313862516,
+        "randomize",
+        0.1,
+        0.95,
+        512,
+        1024,
+        2,
+        false
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        -31.004796981811523,
+        275.9989318847656
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "468402015_10162027488391306_7763794463718577777_n.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "ShowText|pysssss",
+      "pos": [
+        806.0066528320312,
+        118.39436340332031
+      ],
+      "size": [
+        388.8511047363281,
+        548.7933349609375
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "pos": [
+            10,
+            36
+          ],
+          "widget": {
+            "name": "text"
+          },
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "shape": 6,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "I see a colorful, artistic depiction of a bird with vibrant feathers and a large, detailed eye. The feathers are in various shades of blue, green, orange, and red, and the bird's beak is bright orange. The overall design is very intricate and visually striking."
+      ]
+    },
+    {
+      "id": 15,
+      "type": "KepStringLiteral",
+      "pos": [
+        -482.566650390625,
+        199.36610412597656
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            19
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KepStringLiteral"
+      },
+      "widgets_values": [
+        "what you see?"
+      ]
+    }
+  ],
+  "links": [
+    [
+      15,
+      17,
+      0,
+      16,
+      0,
+      "JANUS_MODEL"
+    ],
+    [
+      17,
+      11,
+      0,
+      16,
+      1,
+      "IMAGE"
+    ],
+    [
+      18,
+      16,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      19,
+      15,
+      0,
+      16,
+      3,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7247295000000004,
+      "offset": [
+        819.4475764980034,
+        -61.684983382160794
+      ]
+    },
+    "node_versions": {
+      "comfy-core": "0.3.18",
+      "ComfyUI-Custom-Scripts": "d6657cc1f04539dbeea38d7bf6d73bc025004fa4",
+      "ComfyLiterals": "bdddb08ca82d90d75d97b1d437a652e0284a32ac"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
