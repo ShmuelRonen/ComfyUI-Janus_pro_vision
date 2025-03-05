@@ -30,6 +30,7 @@ git clone https://github.com/ShmuelRonen/ComfyUI-Janus_pro_vision.git
 ```bash
 pip install requests
 pip install tqdm
+pip install attrdict
 ```
 
 3. The model files will be automatically downloaded on first use from DeepSeek's HuggingFace repository.
