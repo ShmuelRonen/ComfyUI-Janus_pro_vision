@@ -1,0 +1,14 @@
+[project]
+name = "janus_pro_vision"
+description = "A ComfyUI custom node extension that integrates the Janus-Pro-7B vision-language model from DeepSeek AI on your's local computer, enabling powerful image understanding and multi-turn conversation capabilities."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/ShmuelRonen/ComfyUI-Janus_pro_vision"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Janus_pro_vision"
+Icon = ""
